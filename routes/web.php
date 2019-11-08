@@ -11,6 +11,11 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
+Route::get('/', 'EmployeeController@index');
+Route::get('/input', 'EmployeeController@input');
+
+Route::get('/login', function () {
+    return view('login');
 });
+
+
