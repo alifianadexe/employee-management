@@ -18,7 +18,7 @@
                 <a class="nav-link" href="/">View</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="/input">Input</a>
+                <a class="nav-link" href="/form">Input</a>
             </li>
         </ul>
     </nav>

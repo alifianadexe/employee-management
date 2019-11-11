@@ -20,8 +20,8 @@
                         <th>Name</th>
                         <th>Birthday</th>
                         <th>Since</th>
-                        <th class="text-right">Salary</th>
-                        <th class="text-right">Actions</th>
+                        <th class="text-right">Gender</th>
+                        <th class="text-center">Actions</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -37,18 +37,22 @@
                         <td>{{ "Female" }}</td>
                         @endif
                         <td class="td-actions text-right">
-                            <button type="button" rel="tooltip" class="btn btn-info btn-just-icon btn-sm"
-                                data-original-title="" title="">
-                                <i class="material-icons">person</i>
-                            </button>
-                            <button type="button" rel="tooltip" class="btn btn-success btn-just-icon btn-sm"
-                                data-original-title="" title="">
-                                <i class="material-icons">edit</i>
-                            </button>
-                            <button type="button" rel="tooltip" class="btn btn-danger btn-just-icon btn-sm"
-                                data-original-title="" title="">
-                                <i class="material-icons">close</i>
-                            </button>
+                            <a href="/detail/{{ $employe->emp_no }}">
+                                <button type="button" rel="tooltip" class="btn btn-info btn-just-icon btn-sm" data-original-title="" title="">
+                                    <i class="material-icons">detail</i>
+                                </button>
+                            </a>
+                            <a href="/edit/{{ $employe->emp_no }}">
+                                <button type="button" rel="tooltip" class="btn btn-success btn-just-icon btn-sm" data-original-title="" title="">
+                                    <i class="material-icons">edit</i>
+                                </button>
+                            </a>
+                            <a href="/delete/{{ $employe->emp_no }}">
+                                <button type="button" rel="tooltip" class="btn btn-danger btn-just-icon btn-sm"
+                                    data-original-title="" title="">
+                                    <i class="material-icons">delete</i>
+                                </button>
+                            </a>
                         </td>
                     </tr>
                     @endforeach

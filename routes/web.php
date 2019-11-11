@@ -12,7 +12,14 @@
 */
 
 Route::get('/', 'EmployeeController@index');
-Route::get('/input', 'EmployeeController@input');
+
+Route::get('/form', 'EmployeeController@form');
+Route::post('/form/input', 'EmployeeController@input');
+Route::post('/form/update', 'EmployeeController@update');
+
+Route::get('/detail/{emp_no}', 'EmployeeController@detail');
+Route::get('/edit/{emp_no}', 'EmployeeController@edit');
+Route::get('/delete/{emp_no}', 'EmployeeController@delete');
 
 Route::get('/login', function () {
     return view('login');
